@@ -224,7 +224,8 @@ function aat_reavel_customize_register( $wp_customize ) {
 				'title' => __('Set Banner for Archives','aat_reavel'),
 				'description' => __('Update banner for Archives', 'aat_reavel'),
 				'priority' => 5,
-				'panel' => 'aat-options-panel'
+				'panel' => 'aat-options-panel',
+				'active_callback' => 'is_archive'
 			)
 		);
 
