@@ -4,6 +4,13 @@
  */
 	get_header(); 
 
+
+$test = get_theme_mod('aat_main_slider_type');
+
+$rest = get_theme_mod('aat_main_slider_no_of_slides');
+
+echo $test.'xqluz'.$rest;
+
 ?>
 <!-- Slider Section -->
 <div id="slider-wrapper" class="banner banner-home banner-slider">

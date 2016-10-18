@@ -268,6 +268,8 @@ function aat_reavel_customize_register( $wp_customize ) {
 		endforeach;
 
 
+//Customizer Options For the Main Slider
+require TEMP_DIR . '/inc/slider.php';
 
 }
 add_action( 'customize_register', 'aat_reavel_customize_register' );
@@ -279,6 +281,9 @@ function aat_reavel_customize_preview_js() {
 	wp_enqueue_script( 'aat_reavel_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'aat_reavel_customize_preview_js' );
+
+
+
 
 
 /**
