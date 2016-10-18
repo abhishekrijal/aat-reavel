@@ -134,36 +134,36 @@ function aat_reavel_customize_register( $wp_customize ) {
 		);
 
 
-		$pages = get_pages();
-		$page_title= array();
-		for ($i=0; $i <= count($pages); $i++) { 
+		// $pages = get_pages();
+		// $page_title= array();
+		// for ($i=0; $i <= count($pages); $i++) { 
 
-			$page_title[$i] = str_replace('-', '_' , $pages[$i]->post_name);
+		// 	$page_title[$i] = str_replace('-', '_' , $pages[$i]->post_name);
 			
-		}
+		// }
 
-		foreach($page_title as $v):
+		// foreach($page_title as $v):
 
-			$wp_customize->add_setting(
-				'banner_' . $v,
-				array(
-					'default' => ''
-				)
-			);
+		// 	$wp_customize->add_setting(
+		// 		'banner_' . $v,
+		// 		array(
+		// 			'default' => ''
+		// 		)
+		// 	);
 
-			$wp_customize->add_control(
-				new WP_Customize_Image_Control(
-		        	$wp_customize,
-		    		'banner_' . $v,
-					array(
-						'label'    => $v .  ' Image',
-						'settings' => 'banner_' . $v,
-						'section'  => 'aat_banner_update_section'
-		    		)
-		    	)
-			);
+		// 	$wp_customize->add_control(
+		// 		new WP_Customize_Image_Control(
+		//         	$wp_customize,
+		//     		'banner_' . $v,
+		// 			array(
+		// 				'label'    => $v .  ' Image',
+		// 				'settings' => 'banner_' . $v,
+		// 				'section'  => 'aat_banner_update_section'
+		//     		)
+		//     	)
+		// 	);
 
-		endforeach;
+		// endforeach;
 
 		/**
 		 * Section 
@@ -269,6 +269,8 @@ function aat_reavel_customize_register( $wp_customize ) {
 
 
 //Customizer Options For the Main Slider
+require TEMP_DIR . '/inc/custom-functs.php';
+
 require TEMP_DIR . '/inc/slider.php';
 
 }

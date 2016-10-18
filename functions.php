@@ -180,8 +180,7 @@ add_action( 'after_setup_theme', 'aat_reavel_content_width', 0 );
 	}
 	add_action('wp_enqueue_script' , 'aat_reavel_ajax_scipts' , 10 );
 
-	require TEMP_DIR . '/inc/custom-functs.php';
-
+	
 	require TEMP_DIR . '/inc/callbacks.php';
 
 	require TEMP_DIR . '/inc/options.php';
